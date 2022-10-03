@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  postgres_trading:
+    image: postgres:12.10
+    container_name: postgres_trading
+    hostname: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password4postgres
+      POSTGRES_DB: trading
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_trading:/var/lib/postgresql
+
